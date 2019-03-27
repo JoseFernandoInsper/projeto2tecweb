@@ -1,6 +1,6 @@
-CREATE DATABASE meus_dados;
+CREATE DATABASE tec_projeto2;
 
-USE meus_dados;
+USE tec_projeto2;
 
 create table usuario (
 	id_usuario int NOT NULL AUTO_INCREMENT,
