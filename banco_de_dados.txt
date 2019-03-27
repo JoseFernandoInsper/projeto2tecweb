@@ -1,0 +1,21 @@
+CREATE DATABASE meus_dados;
+
+USE meus_dados;
+
+create table usuario (
+	id NOT NULL AUTO_INCREMENT,
+	login VARCHAR(255),
+	senha VARCHAR(255),
+	PRIMARY_KEY(id)
+	);
+
+create table data(
+	id NOT NULL AUTO_INCREMENT,
+	texto VARCHAR(255),
+	data TIMESTAMP,
+	id_user NOT NULL AUTO_INCREMENT,
+	idioma NOT NULL VARCHAR(255),
+	traducao VARCHAR(255),
+	PRIMARY_KEY(id),
+	FOREIGN_KEY(id_user) REFERENCES usuario(id)
+	);
