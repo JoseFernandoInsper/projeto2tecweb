@@ -10,12 +10,12 @@ create table usuario (
 	);
 
 create table data(
-	id NOT NULL AUTO_INCREMENT,
+	id int NOT NULL AUTO_INCREMENT,
 	texto VARCHAR(255),
 	data TIMESTAMP,
 	id_user NOT NULL AUTO_INCREMENT,
 	idioma NOT NULL VARCHAR(255),
 	traducao VARCHAR(255),
-	PRIMARY_KEY(id),
-	FOREIGN_KEY(id_user) REFERENCES usuario(id)
+	PRIMARY KEY(id),
+	FOREIGN KEY(id_user) REFERENCES usuario(id_usuario)
 	);
