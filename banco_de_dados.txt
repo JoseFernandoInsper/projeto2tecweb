@@ -19,3 +19,9 @@ create table data(
 	PRIMARY KEY(id),
 	FOREIGN KEY(id_user) REFERENCES usuario(id_usuario)
 	);
+
+ INSERT INTO usuario (login,senha) VALUES ("gubenites",1234);
+ INSERT INTO usuario (login,senha) VALUES ("jose",4567);
+ 
+ INSERT INTO data (texto,id_user,idioma,traducao) VALUES ("oi tudo bem",1,"ingles","hello how are you");
+ INSERT INTO data (texto,id_user,idioma,traducao) VALUES ("Meu nome é gustavo",2,"ingles","My name's gustavo") ;
