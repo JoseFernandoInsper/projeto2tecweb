@@ -11,11 +11,11 @@ create table usuario (
 
 create table data(
 	id int NOT NULL AUTO_INCREMENT,
-	texto VARCHAR(255),
-	data TIMESTAMP,
-	id_user NOT NULL AUTO_INCREMENT,
+	texto LONGTEXT,
+	data TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+	id_user int NOT NULL,
 	idioma NOT NULL VARCHAR(255),
-	traducao VARCHAR(255),
+	traducao LONGTEXT,
 	PRIMARY KEY(id),
 	FOREIGN KEY(id_user) REFERENCES usuario(id_usuario)
 	);
