@@ -13,22 +13,27 @@ public class UsuarioDAO {
 	public UsuarioDAO() {
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
-			connection = DriverManager.getConnection(
-					 "jdbc:mysql://localhost/tec_projeto2",
-					"root", "130879"); // MUDAR PARA O USUARIO E SENHA DO SEU COMPUTADORRRRR!!!!
+			connection = DriverManager.getConnection("jdbc:mysql://localhost/tec_projeto2", "root", "130879"); // MUDAR PARA O USUARIO E SENHA DO SEU COMPUTADORRRRR!!!!
 		} catch (ClassNotFoundException | SQLException e) {
+			System.out.println("oioioioi");
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}	
 	}
 	
 	public void adiciona(Usuario usuario) {
-		String sql = "INSERT INTO Usuario (login, senha) values(?, ?)";
+		System.out.println(usuario.getLogin());
+		System.out.println(usuario.getSenha());
+		String sql = "INSERT INTO usuario (login, senha) values(?, ?)";
 		PreparedStatement stmt;
+		System.out.println(connection);
 		try {
 			stmt = connection.prepareStatement(sql);
+
 			stmt.setString(1,usuario.getLogin());
-			stmt.setString(1,usuario.getSenha());
+			stmt.setString(2,usuario.getSenha());
+			System.out.println(usuario.getLogin());
+			System.out.println(usuario.getSenha());
 			stmt.execute();
 			stmt.close();
 			
