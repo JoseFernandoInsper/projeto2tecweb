@@ -1,20 +1,53 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="ISO-8859-1">
-<title>Insert title here</title>
-</head>
-<body>
- <h2>Página de Login</h2>
- <form action="efetuaLogin" method="post">
- Login: <input type="text" name="login" /> <br/>
- Senha: <input type="password" name="senha" /> <br/>
- <input type="submit" value="Entrar" />
- </form>
- <form action="registro" method="post">
- <input type="submit" value="Registro" />
- </form>
-</body>
-</html>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------  ---------->
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+
+
+<div class="container">	
+<hr>
+
+<div class="row">
+	<aside class="col-sm-4">
+	</aside> <!-- col.// -->
+	<aside class="col-sm-4">
+
+
+<div class="card">
+<article class="card-body">
+	<h4 class="card-title text-center mb-4 mt-1">Sign in</h4>
+	<hr>
+	<p class="text-success text-center">Google Tradutor</p>
+	<form action="efetuaLogin" method="post">
+	<div class="form-group">
+	<div class="input-group">
+		<div class="input-group-prepend">
+		    <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+		 </div>
+		<input name="login" class="form-control" placeholder="Login" type="text">
+	</div> <!-- input-group.// -->
+	</div> <!-- form-group// -->
+	<div class="form-group">
+	<div class="input-group">
+		<div class="input-group-prepend">
+		    <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+		 </div>
+	    <input name="senha" class="form-control" placeholder="******" type="password">
+	</div> <!-- input-group.// -->
+	</div> <!-- form-group// -->
+	<div class="form-group">
+	<button type="submit" value="Entrar" class="btn btn-primary btn-block"> Login  </button>
+	</div> <!-- form-group// -->
+	<p class="text-center"><a href="http://localhost:8080/TradutorGoogleAPI/registro" class="btn">Registrar-se</a></p>
+	</form>
+</article>
+</div> <!-- card.// -->
+
+	</aside> <!-- col.// -->
+</div> <!-- row.// -->
+
+</div> 
+<!--container end.//-->
+
