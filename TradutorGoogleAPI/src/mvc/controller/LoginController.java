@@ -46,6 +46,7 @@ public class LoginController {
 	@RequestMapping("efetuaLogin")
 	public String efetuaLogin(Usuario usuario, HttpSession session) {
 		if(new UsuarioDAO().existeUsuario(usuario)) {
+			System.out.println("teste");
 			session.setAttribute("usuarioLogado", usuario.getLogin());
 			return "menu";
 		}

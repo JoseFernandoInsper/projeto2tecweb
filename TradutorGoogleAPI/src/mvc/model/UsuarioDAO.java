@@ -14,6 +14,7 @@ public class UsuarioDAO {
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
 			connection = DriverManager.getConnection("jdbc:mysql://localhost/tec_projeto2", "root", "130879"); // MUDAR PARA O USUARIO E SENHA DO SEU COMPUTADORRRRR!!!!
+			System.out.println("conectou");
 		} catch (ClassNotFoundException | SQLException e) {
 			System.out.println("oioioioi");
 			// TODO Auto-generated catch block
@@ -44,12 +45,14 @@ public class UsuarioDAO {
 	}
 	
 	public boolean existeUsuario (Usuario usuario) {
-boolean existe = false;
+		boolean existe = false;
 		
 		try {
 			PreparedStatement stmt = connection.prepareStatement("SELECT COUNT(*) FROM Usuario  WHERE login=? AND senha=? LIMIT 1");
+			
 			stmt.setString(1, usuario.getLogin());
 			stmt.setString(2, usuario.getSenha());
+			System.out.println(usuario.getLogin());
 			ResultSet rs = stmt.executeQuery();
 			if(rs.next()) {
 				if (rs.getInt(1) != 0) {
