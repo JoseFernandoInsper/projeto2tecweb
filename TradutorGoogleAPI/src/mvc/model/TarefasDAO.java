@@ -24,7 +24,7 @@ public class TarefasDAO {
 			stmt.setString(1,tarefa.getDescricao());
 			stmt.setString(2,tarefa.getIdioma());
 			stmt.setString(3,tarefa.getTraducao());
-			stmt.setString(4,tarefa.getId_user());
+			stmt.setString(4,"2");
 			stmt.execute();
 			stmt.close();
 		} catch (SQLException e) {e.printStackTrace();}

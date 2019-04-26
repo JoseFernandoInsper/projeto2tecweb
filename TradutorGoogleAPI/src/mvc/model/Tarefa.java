@@ -26,7 +26,7 @@ public class Tarefa {
 	public Calendar getDataFinalizacao() {return dataFinalizacao;}
 	public void setDataFinalizacao(Calendar dataFinal) {this.dataFinalizacao = dataFinal;}
 	
-	public String getId_user() {
+	public int getId_user() {
 		return id_user;
 	}
 	public void setId_user(String id_user) {

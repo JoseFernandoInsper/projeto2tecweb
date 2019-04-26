@@ -39,8 +39,6 @@ public class TarefasController {
         String translatedText = Translate.execute(tarefa.getDescricao(), Language.PORTUGUESE, Language.ENGLISH);
         tarefa.setTraducao(translatedText);
         session.setAttribute("txttraduzido", tarefa.getTraducao());
-        tarefa.setId_user(usuario.getLogin());
-        System.out.println("usu" +usuario.getLogin());
         tarefa.setIdioma("ingles");
         dao.adicionaDescricao(tarefa);
         System.out.println(translatedText);
