@@ -16,16 +16,15 @@
 		<div class="row">
 		
 			<div class="card">
-				<form action="traduzir" method="post" >
+				<form action="">
 					<div class="form-group">
-					<p class="text-success text-center"> idioma</p>
+					<p class="text-success text-center"> tradução</p>
 					<div class="input-group">
 					<div class="input-group-prepend">
-					<input name="descricao" type="text">
+					<p class="text-center">${txttraduzido}</p>
 					</div>
 					</div>
 					</div>
-					<button type="submit" value="traduzir" class="btn btn-primary btn-block"> traduzir  </button>
 				</form>
 			</div>
 		</div>
